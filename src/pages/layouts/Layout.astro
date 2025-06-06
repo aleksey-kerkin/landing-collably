@@ -1,0 +1,44 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource/almarai';
+import '@fontsource-variable/bricolage-grotesque';
+import '@/assets/styles/globals.css';
+
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Collably ❖ SaaS Template v2.0 (Community)</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+<style>
+  body {
+    font-family: var(--font-family);
+    color: var(--shade-◼️-dark-500);
+    font-weight: 400;
+    line-height: 143%;
+    background: var(--shade-◻️-light-1000);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+</style>
