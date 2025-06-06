@@ -25,14 +25,19 @@
 .button-accent {
   border: 1px solid var(--📦-common-★-primary-medium);
   overflow: hidden;
+  padding: 0;
 }
 
 .button-accent-text {
   display: inline-flex;
-  align-self: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
   gap: 0.75rem;
   transition: 0.5s ease;
-  transform: translateX(13%);
+  padding-inline-start: 10%;
+  /* transform: translateX(13%); */
 
   &::before {
     display: inline-flex;
@@ -40,10 +45,6 @@
     content: url(/assets/icons/shopping-cart.svg);
     opacity: 1;
     transition: 0.2s ease;
-  }
-
-  &:hover::before {
-    opacity: 0;
   }
 
   &::after {
@@ -54,11 +55,13 @@
     transition: 0.2s ease;
   }
 
-  &:hover::after {
-    opacity: 1;
-  }
-
   &:hover {
-    transform: translateX(-10%);
+    transform: translateX(-23%);
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
   }
 }
