@@ -1,0 +1,64 @@
+@import url(./reset.css);
+@import url(./variables.css);
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+.button {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  background-color: var(--📦-common-★-primary-medium);
+  color: var(--shade-fixed-fix-dark);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 8rem;
+  height: 2.75rem;
+  text-wrap: nowrap;
+}
+
+.button-accent {
+  border: 1px solid var(--📦-common-★-primary-medium);
+  overflow: hidden;
+}
+
+.button-accent-text {
+  display: inline-flex;
+  align-self: center;
+  gap: 0.75rem;
+  transition: 0.5s ease;
+  transform: translateX(13%);
+
+  &::before {
+    display: inline-flex;
+    align-self: center;
+    content: url(/assets/icons/shopping-cart.svg);
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &::after {
+    display: inline-flex;
+    align-self: center;
+    content: url(/assets/icons/arrow-right.svg);
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    transform: translateX(-10%);
+  }
+}

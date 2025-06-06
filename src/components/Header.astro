@@ -1,0 +1,72 @@
+<header>
+  <nav class="container">
+    <img
+      class="logo"
+      src="/assets/img/logo.svg"
+      alt="Collaby logo"
+    />
+    <ul class="menu">
+      <li><a href="">How it works</a></li>
+      <li><a href="">Pricing</a></li>
+      <li><a href="">Features</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+    <div class="buttons">
+      <a
+        class="button button-accent"
+        href=""
+        ><span class="button-accent-text">Shop Now</span></a
+      >
+      <a
+        class="theme-switcher"
+        href=""
+        ><img
+          src="/assets/icons/moon.svg"
+          alt="Theme switcher"
+        /></a
+      >
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    border-bottom: 1px solid var(--shade-◼️-dark-80);
+    display: grid;
+    height: 5.125rem;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+  .menu {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--shade-◼️-dark-1000);
+  }
+
+  .logo {
+    place-items: center;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .theme-switcher {
+    border: 1px solid var(--shade-◼️-dark-100);
+    border-radius: 100%;
+    padding: 0.625rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+</style>

@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+header,
+main,
+section,
+article,
+footer {
+  container-type: inline-size;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  font-style: italic;
+}
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+:where([fill]:not([fill='none'], [fill^='url'])) {
+  fill: currentColor;
+}
+
+:where([stroke]:not([stroke='none'], [stroke^='url'])) {
+  stroke: currentColor;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:where([class]) {
+  display: inline-flex;
+  place-items: center;
+  place-content: center;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
