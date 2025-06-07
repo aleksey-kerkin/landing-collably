@@ -1,0 +1,117 @@
+header {
+  border-bottom: 1px solid var(--shade-◼️-dark-80);
+  display: grid;
+  height: 5.125rem;
+  width: 100%;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--shade-◼️-dark-1000);
+}
+
+.logo {
+  place-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.theme-switcher {
+  border: 1px solid var(--shade-◼️-dark-100);
+  border-radius: 100%;
+  padding: 0.625rem;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.link-flip {
+  overflow: hidden;
+}
+
+.link-flip > * {
+  display: block;
+  transition: translate var(--transition-duration),
+    transform 0s calc(var(--transition-duration) / 2);
+  transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
+}
+
+.link-flip:hover > *,
+.link-flip:focus > * {
+  translate: 0 2lh;
+  transform: translateY(-2lh);
+}
+
+.button {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  background-color: var(--📦-common-★-primary-medium);
+  color: var(--shade-fixed-fix-dark);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 8rem;
+  height: 2.75rem;
+  text-wrap: nowrap;
+}
+
+.button-accent {
+  border: 1px solid var(--📦-common-★-primary-medium);
+  overflow: hidden;
+  padding: 0;
+}
+
+.button-accent-text {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  transition: var(--transition-duration) ease;
+  padding-inline-start: 10%;
+
+  &::before {
+    display: inline-flex;
+    align-self: center;
+    content: url(/assets/icons/shopping-cart.svg);
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+
+  &::after {
+    display: inline-flex;
+    align-self: center;
+    content: url(/assets/icons/arrow-right.svg);
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+
+  &:hover {
+    transform: translateX(-23%);
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}

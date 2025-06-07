@@ -352,4 +352,6 @@
   --shade-◻️-light-80: var(--color-light-80);
   --shade-fixed-fix-dark: var(--color-dark-1000);
   --shade-fixed-fix-light: var(--color-light-1000);
+
+  --transition-duration: 0.3s;
 }
