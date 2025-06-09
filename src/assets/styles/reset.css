@@ -26,14 +26,6 @@ body {
   min-height: 100%;
 }
 
-header,
-main,
-section,
-article,
-footer {
-  container-type: inline-size;
-}
-
 img,
 picture,
 video,

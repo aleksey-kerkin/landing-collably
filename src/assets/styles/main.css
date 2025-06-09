@@ -1,9 +1,63 @@
 @import url(./reset.css);
 @import url(./variables.css);
 @import url(./header.css);
+@import url(./hero.css);
 
-.container {
-  width: 100%;
+body {
+  position: relative;
+  font-family: var(--font-family);
+  color: var(--shade-◼️-dark-500);
+  font-weight: 400;
+  line-height: 143%;
+  display: grid;
+  gap: 5rem;
+  inline-size: 100%;
   max-width: 90rem;
   margin-inline: auto;
+  background-color: var(--shade-◻️-light-1000);
+}
+
+.link-flip {
+  overflow: hidden;
+}
+
+.link-flip > * {
+  display: block;
+  transition: translate var(--transition-duration),
+    transform 0s calc(var(--transition-duration) / 2);
+  transition-timing-function: cubic-bezier(0.66, 0, 0.34, 1);
+}
+
+.link-flip:hover > *,
+.link-flip:focus > * {
+  translate: 0 2lh;
+  transform: translateY(-2lh);
+}
+
+.button {
+  background: var(--shade-◼️-dark-1000);
+  border: 1px solid var(--shade-◻️-light-200);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 8.9375rem;
+  height: 2.25rem;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  line-height: 143%;
+  text-align: center;
+  text-wrap: nowrap;
+  color: var(--shade-◻️-light-1000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0px;
+  margin-inline: auto;
+  transition: var(--transition-duration);
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    background: var(--shade-◼️-dark-700);
+  }
 }
