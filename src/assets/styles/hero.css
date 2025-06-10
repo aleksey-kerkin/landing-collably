@@ -74,19 +74,22 @@
 .hero__title {
   font-family: var(--second-family);
   font-size: 5rem;
+  font-weight: 400;
   line-height: 120%;
   text-align: center;
   color: var(--shade-◼️-dark-1000);
-  text-shadow: -1px 0 var(--📦-common-★-primary-medium),
-    0 1px var(--📦-common-★-primary-medium),
-    1px 0 var(--📦-common-★-primary-medium),
-    0 -1px var(--📦-common-★-primary-medium);
+  text-shadow: -1px 0 var(--📦-common-★-primary-hight),
+    0 1px var(--📦-common-★-primary-hight),
+    1px 0 var(--📦-common-★-primary-hight),
+    0 -1px var(--📦-common-★-primary-hight);
 }
 
 .hero__title--accent {
   color: var(--📦-common-★-primary-medium);
-  text-shadow: -1px 0 var(--shade-◼️-dark-1000), 0 1px var(--shade-◼️-dark-1000),
-    1px 0 var(--shade-◼️-dark-1000), 0 -1px var(--shade-◼️-dark-1000);
+  text-shadow: -1px 0 var(--📦-common-★-primary-hight),
+    0 1px var(--📦-common-★-primary-hight),
+    1px 0 var(--📦-common-★-primary-hight),
+    0 -1px var(--📦-common-★-primary-hight);
 }
 
 .hero__text {
